@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f5fb;
+    color: #222;
+}
+
+header {
+    background: #25145c;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header span {
+    color: #ffcc45;
+}
+
+header p {
+    color: #ddd;
+}
+
+main {
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 0 18px;
+}
+
+.hero,
+.result,
+.checklist {
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h2 {
+    color: #25145c;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #666;
+    line-height: 1.6;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+input[type="text"] {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+button {
+    background: #5b4cff;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #4032d4;
+}
+
+#errorMessage {
+    color: #e63946;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.result h2,
+.checklist h2 {
+    color: #25145c;
+    margin-bottom: 20px;
+}
+
+.details {
+    background: #f5f4ff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.details p {
+    padding: 12px 0;
+    border-bottom: 1px solid #e1dff2;
+    line-height: 1.5;
+}
+
+.details p:last-child {
+    border-bottom: none;
+}
+
+.print-btn {
+    width: 100%;
+}
+
+.checklist label {
+    display: block;
+    margin: 15px 0;
+    color: #444;
+}
+
+.checklist input {
+    margin-right: 10px;
+    accent-color: #5b4cff;
+}
+
+.hidden {
+    display: none;
+}
+
+.notice {
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+footer {
+    background: #25145c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 550px) {
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .hero,
+    .result,
+    .checklist {
+        padding: 20px;
+    }
+}
+
+@media print {
+    header,
+    .hero,
+    .checklist,
+    footer,
+    .notice,
+    .print-btn {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .result {
+        display: block;
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPU Exam Seat Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>LPU <span>EXAM FINDER</span></h1>
+        <p>Examination Hall & Seat Allocation Portal</p>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Find Your Exam Seat 🎓</h2>
+            <p>Enter any 8-digit registration number to find your seat.</p>
+
+            <form id="searchForm">
+                <input
+                    type="text"
+                    id="studentQuery"
+                    placeholder="Enter 8-digit registration number"
+                    maxlength="8"
+                    inputmode="numeric"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Find My Seat</button>
+            </form>
+
+            <p id="errorMessage"></p>
+        </section>
+
+        <section id="resultSection" class="result hidden">
+            <h2>Examination Details</h2>
+
+            <div class="details">
+                <p><strong>Student Name:</strong> <span id="studentName"></span></p>
+                <p><strong>Registration Number:</strong> <span id="regNo"></span></p>
+                <p><strong>Subject:</strong> <span id="subject"></span></p>
+                <p><strong>Exam Date:</strong> <span id="examDate"></span></p>
+                <p><strong>Exam Time:</strong> <span id="examTime"></span></p>
+                <p><strong>Block:</strong> <span id="block"></span></p>
+                <p><strong>Examination Hall:</strong> <span id="hall"></span></p>
+                <p><strong>Floor:</strong> <span id="floor"></span></p>
+                <p><strong>Seat Number:</strong> <span id="seat"></span></p>
+            </div>
+
+            <button class="print-btn" onclick="window.print()">
+                Print Details
+            </button>
+        </section>
+
+        <section class="checklist">
+            <h2>Exam Day Checklist ✅</h2>
+            <label><input type="checkbox"> Carry your university ID card</label>
+            <label><input type="checkbox"> Carry required stationery</label>
+            <label><input type="checkbox"> Check your exam date and time</label>
+            <label><input type="checkbox"> Reach the examination hall early</label>
+        </section>
+
+        <p class="notice">
+            Demo project only. Generated seat details are random
+            and are not official LPU examination allocations.
+        </p>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ for LPU Students</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
